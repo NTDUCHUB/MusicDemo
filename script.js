@@ -13,7 +13,6 @@ const waveSurfer = WaveSurfer.create({
     height: 150,
     barWidth: 3
 });
-
 // Khi tệp âm thanh đã sẵn sàng, tạo sóng nhạc
 waveSurfer.load('https://files.catbox.moe/zzzuhz.mp4');
 
@@ -29,7 +28,6 @@ playPauseButton.addEventListener('click', () => {
         playPauseButton.textContent = '▶'; // Chuyển thành nút Play
     }
 });
-
 // Cập nhật thanh điều khiển tiến trình khi nhạc đang phát
 audio.addEventListener('timeupdate', () => {
     seekBar.value = (audio.currentTime / audio.duration) * 100;
@@ -56,13 +54,12 @@ function createSnowflakes() {
         snowContainer.appendChild(snowflake);
     }
 }
-
 createSnowflakes();
 function createSnowflakes() {
     const snowflakeCount = 100;  // Số lượng tuyết
     const snowContainer = document.querySelector('.snow');
 
-    for (let i = 0; i < snowflakeCount; i++) {
+     for (let i = 0; i < snowflakeCount; i++) {
         const snowflake = document.createElement('div');
         snowflake.classList.add('snowflake');
         snowflake.innerHTML = '❄🌸';
