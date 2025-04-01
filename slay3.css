@@ -1,0 +1,41 @@
+/* Nền tuyết rơi */
+.snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Bông tuyết */
+.snowflake {
+    position: absolute;
+    font-size: 24px;
+    color: white;
+    animation: snowfall 10s linear infinite, drift 5s ease-in-out infinite;
+}
+
+/* Hiệu ứng tuyết rơi */
+@keyframes snowfall {
+    0% {
+        top: -5%; /* Bắt đầu từ trên cùng */
+    }
+    100% {
+        top: 100%; /* Kết thúc ở dưới cùng */
+    }
+}
+
+/* Hiệu ứng drift (lệch từ trái sang phải để phân tán) */
+@keyframes drift {
+    0% {
+        left: 0%;
+    }
+    50% {
+        left: 10%; /* Lệch một chút sang phải */
+    }
+    100% {
+        left: -10%; /* Lệch một chút sang trái */
+    }
+}
