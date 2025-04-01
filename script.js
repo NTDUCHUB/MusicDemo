@@ -15,7 +15,7 @@ const waveSurfer = WaveSurfer.create({
 });
 
 // Khi tệp âm thanh đã sẵn sàng, tạo sóng nhạc
-waveSurfer.load('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
+waveSurfer.load('https://files.catbox.moe/zzzuhz.mp4');
 
 // Điều khiển Play/Pause
 playPauseButton.addEventListener('click', () => {
