@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Phát Nhạc</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Background and Snow Effect -->
+    <div class="background">
+        <div class="snow"></div>
+        
+        <!-- Music Player Container -->
+        <div class="player-container">
+            <div class="player">
+                <div class="track-info">
+                    <h2>Anime Music</h2>
+                    <p>Thư giãn và thưởng thức</p>
+                </div>
+
+                <!-- Waveform Display -->
+                <div id="waveform"></div>
+
+                <!-- Audio Player Controls -->
+                <div class="controls">
+                    <button id="playPause" class="play-btn">▶</button>
+                    <input id="seek-bar" type="range" value="0" min="0" step="1">
+                    <audio id="audio" preload="auto">
+                        <source src="https://files.catbox.moe/zzzuhz.mp4" type="audio/mp4">
+                        Trình duyệt của bạn không hỗ trợ thẻ audio.
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/wavesurfer.js"></script> <!-- Wavesurfer.js for waveform -->
+    <script src="script.js"></script>
+</body>
+</html>
