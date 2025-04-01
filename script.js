@@ -65,7 +65,7 @@ function createSnowflakes() {
     for (let i = 0; i < snowflakeCount; i++) {
         const snowflake = document.createElement('div');
         snowflake.classList.add('snowflake');
-        snowflake.innerHTML = '❄';
+        snowflake.innerHTML = '❄🌸';
         snowflake.style.left = Math.random() * 100 + 'vw';  // Vị trí tuyết
         snowflake.style.animationDuration = Math.random() * 3 + 5 + 's';  // Thời gian rơi tuyết
         snowflake.style.animationDelay = Math.random() * 2 + 's';  // Độ trễ khi tuyết rơi
