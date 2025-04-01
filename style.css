@@ -108,3 +108,156 @@ input[type="range"]:focus {
     width: 100%;
     height: 150px;
 }
+/* Reset các giá trị mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradient nền đẹp */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hiệu ứng tuyết rơi */
+.snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.snowflake {
+    position: absolute;
+    font-size: 24px;
+    animation: snowfall 5s linear infinite;
+    color: white;
+}
+
+@keyframes snowfall {
+    0% { top: -10%; }
+    100% { top: 100%; }
+}
+
+/* Player container */
+.player-container {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    width: 80%;
+    height: 80%;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Định dạng thông tin bài hát */
+.track-info h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.track-info p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Hiển thị sóng nhạc */
+#waveform {
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Điều khiển */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#playPause {
+    background: none;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    color: white;
+    font-size: 35px;
+    padding: 10px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 20px;
+}
+
+#playPause:hover {
+    transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+input[type="range"] {
+    width: 80%;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    height: 5px;
+    outline: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="range"]:focus {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ff5722;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+    background: #ff9800;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ff5722;
+    cursor: pointer;
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+    background: #ff9800;
+}
+
+/* Thêm hiệu ứng hoạt hình cho tuyết rơi */
+.snowflake {
+    position: absolute;
+    font-size: 30px;
+    animation: snowfall 10s linear infinite;
+}
+
+@keyframes snowfall {
+    0% { top: -5%; }
+    100% { top: 100%; }
+}
